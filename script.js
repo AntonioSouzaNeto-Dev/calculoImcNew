@@ -1,3 +1,28 @@
+/*weight.addEventListener('keydown', function (e) {
+    if (e.key === 'e' || e.key === 'E') {
+        e.preventDefault(); // Impede que a letra "e" seja digitada
+    }
+});*/
+
+weight.addEventListener('input', function (){
+    if (weight.value <=0 || weight.value >=300 || isNaN(weight.value)){
+        weight.value = ""
+    }
+})
+
+height.addEventListener('input', function(){
+    if (height.value <=0 || height.value >=300 || isNaN(height.value)){
+        height.value = ""
+    }
+})
+
+age.addEventListener('input', function(){
+    if (age.value <=0 || age.value >=150 || isNaN(age.value)){
+        age.value = ""
+    }
+})
+
+
 function calculateIMC(){
     const weight = parseFloat(document.getElementById('weight').value);
     const height = parseFloat(document.getElementById('height').value);
